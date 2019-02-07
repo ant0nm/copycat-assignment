@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+header {
+  background-color: #06D6A0;
+  text-align: center;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  margin: 0;
+  color: white;
+  font-size: 30px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content > h2 {
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: 5px solid #EF476F;
+}
+img {
+  width: 100%;
+}
+
+.call-to-action, .products, .about {
+  padding: 30px 20px;
+}
+
+.call-to-action {
+  background-color: #FFD166;
+}
+
+.products {
+  background-color: #F2F2F2;
+}
+
+.about {
+  background-color: #26547C;
+  color: white;
+}
+
+.team-item {
+  text-align: center;
+  text-transform: uppercase;
+  color: #EF476F;
+}
+
+footer {
+  background-color: #06D6A0;
+  height: 50px;
+  line-height: 50px;
+  text-align: right;
+  padding: 0 20px;
+}
+
+/* styles only applied (on top) when browser width is >= 550px */
+@media screen and (min-width: 550px) {
+
+  html {
+      font-size: 1.2em;
+  }
+
+  header {
+    overflow: hidden;
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  #home {
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+
+  .hero {
+    background-color: #26547C;
+    color: white;
+  }
+
+  .hero-content > h2 {
+    font-size: 37.5px;
+    border: 0;
+    padding: 0;
+  }
+
+  #product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 10px;
+  }
+
+  .product-item > img {
+    border: 3px solid black;
+  }
+
+  .navbar {
+    float: right;
+    padding: 0;
+  }
+  .logo {
+    float: left;
+    line-height: 60px;
+    font-size: 18px;
+  }
+  .nav-item {
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 60px;
+  }
+
+}
+
+@media screen and (min-width: 300px) {
+  .team {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
